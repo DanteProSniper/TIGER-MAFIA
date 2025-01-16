@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DanteProSniper/TIGER-MAFIA#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pug": "^3.0.3"
   }
 }

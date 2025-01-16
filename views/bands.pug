@@ -1,0 +1,17 @@
+extends template.pug 
+block content
+    h2=title 
+
+    div(class="create")
+        form(action="/bands", method="post" hx-post="/bands" hx-target=".allBands" hx-swap="beforeend") 
+            input(type="text", name="name" placeholder="Band")
+            br
+            input(type="text", name="genre" placeholder="Genre")
+            br
+            input(type="submit", value="Save")
+    div(class="allBands")
+        if bands
+            each b in bands
+                div(id=b.id class="bands")
+                    h3=b.name 
+                    p=b.genre 
